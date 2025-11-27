@@ -1,0 +1,78 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(250, 229, 204);
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 2rem;
+}
+
+.heading .firstTwoWords{
+    color: #47a100;
+    margin-right: 10px;
+}
+.heading .lastword{
+    color: #60471c;
+}
+
+.main{
+    margin-top: 60px;
+    width: 700px;
+    height: 800px;
+    background: white;
+    border-radius: 20px;
+    padding: 30px 20px;
+    margin-right: 10px;
+}
+
+.completingGoals{
+    margin-top: 30px;
+}
+
+.main .goalsSection input{
+    width: 100%;
+    border-radius: 10px;
+    background: #e9f1e2;
+    margin: 20px 0;
+    /* border: none; */
+}
+
+.goalsSection .setgoals{
+    color: rgb(156, 121, 57);
+}
+
+.main .goalsSection .goals{
+width: 100%;
+height: 50px;
+}
+.goals input{
+    height: 60px;
+}
+.goals .goals1{
+    height: 90px;
+    border: 10px solid black;
+
+}
+
+
+
