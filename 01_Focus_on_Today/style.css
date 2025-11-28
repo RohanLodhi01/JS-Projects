@@ -27,15 +27,16 @@ body {
     font-size: 2rem;
 }
 
-.heading .firstTwoWords{
+.heading .firstTwoWords {
     color: #47a100;
     margin-right: 10px;
 }
-.heading .lastword{
+
+.heading .lastword {
     color: #60471c;
 }
 
-.main{
+.main {
     margin-top: 60px;
     width: 700px;
     height: 800px;
@@ -45,11 +46,11 @@ body {
     margin-right: 10px;
 }
 
-.completingGoals{
+.completingGoals {
     margin-top: 30px;
 }
 
-.main .goalsSection input{
+.main .goalsSection .progress-bar {
     width: 100%;
     border-radius: 10px;
     background: #e9f1e2;
@@ -57,22 +58,24 @@ body {
     /* border: none; */
 }
 
-.goalsSection .setgoals{
-    color: rgb(156, 121, 57);
+.error-label {
+    color: #FF5151;
 }
 
-.main .goalsSection .goals{
-width: 100%;
-height: 50px;
-}
-.goals input{
-    height: 60px;
-}
-.goals .goals1{
-    height: 90px;
-    border: 10px solid black;
-
+.goal-container {
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    border-radius: 17px;
+    width: 570px;
+    height: 82px;
+    padding: 0 22px;
+    display: flex;
+    align-items: center;
 }
 
-
-
+.custom-checkbox {
+    height: 24px;
+    width: 24px;
+    display: flex;
+    border: 2px solid rgba(97, 72, 28, 0.3);
+    border-radius: 50%;
+}
