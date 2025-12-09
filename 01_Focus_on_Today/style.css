@@ -115,7 +115,7 @@ body {
     border: none;
     /* flex-grow: 1; */
     align-self: stretch;
-    font-weight: 800;
+    font-weight: 500;
 }
 
 .goal-input::placeholder {
@@ -152,3 +152,4 @@ body {
 .completed .check-icon{
     display: block;
 }
+
