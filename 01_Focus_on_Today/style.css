@@ -81,8 +81,14 @@ body {
 
 .error-label {
     color: #FF5151;
+    margin-top: 4px;
+    font-size: 12px;
+    display: none;
 }
 
+.show-error .error-label{
+    display: block;
+}
 .goal-container {
     margin-top: 20px;
     border: 1px solid rgb(0, 0, 0, 0.2);
