@@ -18,6 +18,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+
 .heading {
     display: flex;
     align-items: center;
@@ -63,26 +64,26 @@ body {
 .progress-value {
     height: 100%;
     width: 0;
-    display: inline;
-    overflow: hidden;
     background-color: #44a300;
-    color: #eeffe0;
-    font-weight: 500;
-    font-size: 25px;
     border-radius: 15px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #eeffe0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 }
 
 .progress-value span {
+    white-space: nowrap;
+    display: inline;
     padding-left: 20px;
-    font-size: 15px;
-
-    vertical-align: middle;
 }
 
 .error-label {
     color: #FF5151;
     margin-top: 4px;
-    font-size: 12px;
+    font-size: 20px;
     display: none;
 }
 
@@ -121,7 +122,8 @@ body {
     border: none;
     /* flex-grow: 1; */
     align-self: stretch;
-    font-weight: 500;
+    font-weight: 700;
+    
 }
 
 .goal-input::placeholder {
