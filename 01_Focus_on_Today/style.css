@@ -47,14 +47,16 @@ body {
 }
 
 .completingGoals {
-    margin-top: 30px;
+    font: 14px;
+    color: #858585;
+    margin-bottom: 20px;
 }
 
 
 
 .progress-bar {
-    margin: 20px 0;
-    width: 574px;
+    /* margin: 20px 0; */
+    /* width: 574px; */
     height: 30px;
     background-color: rgba(72, 163, 0, 0.1);
     border-radius: 15px;
@@ -72,11 +74,13 @@ body {
     display: flex;
     align-items: center;
     overflow: hidden;
+    transition: width 0.2s ease-in-out;
 }
 
 .progress-value span {
-    white-space: nowrap;
-    display: inline;
+    /* white-space: nowrap; */
+    /* display: inline; */
+    min-width: max-content;
     padding-left: 20px;
 }
 
@@ -91,15 +95,13 @@ body {
     display: block;
 }
 .goal-container {
-    margin-top: 20px;
-    border: 1px solid rgb(0, 0, 0, 0.2);
+    border: 1px solid rgb(0, 0, 0, 0.1);
     border-radius: 17px;
-    width: 570px;
-    min-height: 82px;
-    padding: 0 22px;
+    height: 82px;
     display: flex;
     align-items: center;
-    background-color: #FFFFFF;
+    padding: 0 22px;
+    background-color: #ffffff;
     margin-bottom: 42px;
 }
 
@@ -112,6 +114,7 @@ body {
     border: 2px solid rgba(97, 72, 28, 0.3);
     border-radius: 50%;
     flex-shrink: 0;
+    cursor: pointer;
 }
 
 .goal-input {
