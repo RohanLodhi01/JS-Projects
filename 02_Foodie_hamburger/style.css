@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #F6F0EB;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration-line: none;
+    color: inherit;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 24px 32px;
+}
+
+nav a {
+    font-weight: 700;
+    font-size: 20px;
+    color: #492118;
+}
+
+/*  nav a + a excep first apply style to all  */
+nav a+a {
+    margin-left: 60px;
+}
+
+.logo{
+    width: 50px;
+}
+
+.logo img{
+    width: 100%;
+}
