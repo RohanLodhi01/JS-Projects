@@ -28,10 +28,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    min-height: 100px;
 }
 
 nav {
     display: flex;
+
 }
 
 nav a {
@@ -43,6 +45,39 @@ nav a {
 /*  nav a + a excep first apply style to all  */
 nav a+a {
     margin-left: 60px;
+}
+
+.close-icon {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    display: none;
+}
+
+.hamburger-menu-container {
+    height: 70px;
+    width: 70px;
+    overflow: hidden;
+    position: relative;
+    display: none;
+}
+
+.hamburger-menu {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: -128px;
+    right: -128px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
+
+.hamburger-icon {
+    font-size: 18px;
+    position: absolute;
+    left: 40px;
+    bottom: 32px;
 }
 
 .logo {
@@ -140,29 +175,69 @@ main {
     nav a+a {
         margin-left: 32px;
     }
+
+    .food-section {
+        margin-top: 42px;
+    }
+
+    .hero-section p {
+        font-size: 14px;
+    }
+
+    .food-section h2 {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 760px) {
 
     header {
-        background-color: transparent;
+        background-color: rgba(246, 240, 235, 0.459);
+        backdrop-filter: blur(8px);
+        position: sticky;
+        top: 0;
     }
-    .hero-section{
-        margin-top: 40px;
+
+    .header-content {
+        min-height: 70px;
     }
+
+    .menu-open .hamburger-menu-container {
+        display: none;
+    }
+
+    .menu-open nav {
+        /* display: flex; */
+        right: 24px;
+    }
+
+    .hero-section {
+        margin-top: 32px;
+    }
+
+
 
     nav {
         position: absolute;
         background: rgba(255, 255, 255, 0.9);
         flex-direction: column;
         padding: 24px;
-        top: 24px;
-        right: 24px;
-
+        top: 16px;
+        right: -200px;
+        /* display: none; */
+        transition: right 0.25s ease-in-out;
     }
 
     nav a+a {
         margin: 0;
         margin-top: 16px;
     }
+
+    .close-icon,
+    .hamburger-menu-container {
+        display: block;
+        cursor: pointer;
+    }
+
+
 }
