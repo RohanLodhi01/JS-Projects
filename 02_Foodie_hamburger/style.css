@@ -204,7 +204,7 @@ main {
     }
 
     .header-content {
-        min-height: 40px;
+        min-height: 50px;
     }
 
     .menu-open .hamburger-menu-container {
