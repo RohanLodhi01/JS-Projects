@@ -16,4 +16,3 @@ closeIcon.addEventListener("click", () => {
   headerContent.classList.remove("menu-open");
 });
 
-// hello
