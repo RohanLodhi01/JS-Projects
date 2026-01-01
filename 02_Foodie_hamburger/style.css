@@ -59,29 +59,29 @@ nav a+a {
 }
 
 .hamburger-menu-container {
-    height: 70px;
-    width: 70px;
+  height: 50px;
+    width: 50px;
     overflow: hidden;
     position: relative;
     display: none;
 }
 
 .hamburger-menu {
-    height: 200px;
+ height: 200px;
     width: 200px;
     position: absolute;
-    top: -128px;
-    right: -128px;
+    top: -145px;
+    right: -140px;
     border-radius: 50%;
     background-color: white;
     cursor: pointer;
 }
 
 .hamburger-icon {
-    font-size: 18px;
+    font-size: 16px;
     position: absolute;
-    left: 40px;
-    bottom: 32px;
+    left: 34px;
+    bottom: 26px;
 }
 
 .logo {
@@ -200,10 +200,11 @@ main {
         backdrop-filter: blur(8px);
         position: sticky;
         top: 0;
+        padding: 8px 24px;
     }
 
     .header-content {
-        min-height: 70px;
+        min-height: 40px;
     }
 
     .menu-open .hamburger-menu-container {
@@ -253,5 +254,7 @@ main {
         font-size: 10px;
     }
 
-
+    .logo {
+        width: 30px;
+    }
 }
