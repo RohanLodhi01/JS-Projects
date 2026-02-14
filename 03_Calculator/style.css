@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+}
+
+.calculator {
+    background: #19051e;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+}
+
+.display_screen {
+    background: #1a1a1a;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.previous_operand {
+    color: #888;
+    font-size: 1.2rem;
+    min-height: 1.5rem;
+}
+
+.current_operand {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Button styles */
+.btn {
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 25px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Number buttons */
+.btn-number {
+    background: #505050;
+}
+
+.btn-number:hover {
+    background: #606060;
+}
+
+/* Operator buttons */
+.btn-operator {
+    background: #ff9500;
+}
+
+.btn-operator:hover {
+    background: #ffad33;
+}
+
+/* Functions buttons AC DEL %  */
+.btn-function {
+    background: #a5a5a5;
+    color: #1a1a1a;
+}
+
+.btn-function:hover {
+    background: #b5b5b5;
+}
+
+/* EQUAL BUTTON */
+.btn-equals {
+    background: #34c759;
+    grid-column: span 2;
+}
+
+.btn-equals:hover {
+    background: #4cd964;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 400px) {
+    .calculator {
+        max-width: 100%;
+    }
+
+    .current_operand {
+        font-size: 2rem;
+    }
+
+    .btn {
+        padding: 20px;
+        font-size: 1.3rem;
+    }
+
+}
