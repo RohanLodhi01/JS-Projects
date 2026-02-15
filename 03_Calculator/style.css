@@ -1,130 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-height: 100vh;
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
-    padding: 20px;
+    background: linear-gradient(45deg, #0a0a0a, #3a4452)
 }
 
 .calculator {
-    background: #19051e;
-    border-radius: 20px;
+    border: 1px solid #717377;
     padding: 20px;
-    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.3);
-    width: 100%;
-    max-width: 400px;
+    border-radius: 16px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
 }
 
-.display_screen {
-    background: #1a1a1a;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: right;
-    min-height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.previous_operand {
-    color: #888;
-    font-size: 1.2rem;
-    min-height: 1.5rem;
-}
-
-.current_operand {
-    color: #fff;
-    font-size: 2.5rem;
-    font-weight: bold;
-    word-wrap: break-word;
-    word-break: break-all;
-}
-
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-}
-
-/* Button styles */
-.btn {
+input {
+    width: 320px;
+    padding: 24px;
+    margin: 10px;
     border: none;
-    border-radius: 10px;
-    font-size: 1.5rem;
-    font-weight: 600;
-    padding: 25px;
+    outline: none;
+    background: transparent;
+    text-align: right;
+    font-size: 40px;
+    box-shadow: 0px 3px 15px rgb(84, 84, 84, 0.1);
     cursor: pointer;
-    transition: all 0.2s ease;
+    color: #ffffff
 }
 
-.btn:hover {
-    transform: scale(1.05);
+input::placeholder {
+    color: #ffffff;
 }
 
-.btn:active {
-    transform: scale(0.95);
+button {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    box-shadow: -8px -8px 15px rgb(255, 255, 255, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-/* Number buttons */
-.btn-number {
-    background: #505050;
+.equalBtn{
+    background-color: #fb7c14;
 }
 
-.btn-number:hover {
-    background: #606060;
-}
-
-/* Operator buttons */
-.btn-operator {
-    background: #ff9500;
-}
-
-.btn-operator:hover {
-    background: #ffad33;
-}
-
-/* Functions buttons AC DEL %  */
-.btn-function {
-    background: #a5a5a5;
-    color: #1a1a1a;
-}
-
-.btn-function:hover {
-    background: #b5b5b5;
-}
-
-/* EQUAL BUTTON */
-.btn-equals {
-    background: #34c759;
-    grid-column: span 2;
-}
-
-.btn-equals:hover {
-    background: #4cd964;
-}
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 400px) {
-    .calculator {
-        max-width: 100%;
-    }
-
-    .current_operand {
-        font-size: 2rem;
-    }
-
-    .btn {
-        padding: 20px;
-        font-size: 1.3rem;
-    }
-
+.operator{
+    color: #6dee0a;
 }
