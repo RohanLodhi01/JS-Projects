@@ -14,7 +14,7 @@
     <div class="Weather-container">
         <div class="weather">
             <div class="search-bar">
-                <input type="text">
+                <input type="text" placeholder="Enter city name">
                 <button><i class="fa-brands fa-sistrix"></i></button>
             </div>
             <div class="full-sun">
@@ -22,14 +22,26 @@
             </div>
 
             <div class="weather-dets">
-                <div class="temp">
-                    <h1>22.c</h1>
-                    <h2>Bengaluru</h2>
+                <div>
+                    <h1 class="temp">25°c</h1>
+                    <h2 class="city">Bangalore</h2>
                 </div>
 
-                <div class="humidity-&-windspeed">
-                    <div>
-                        <img src="imgages/humidity.png" alt="humidity">
+                <div class="humidity-windspeed">
+                    <div class="section">
+                        <img src="imgages/humidity.png" alt="humidity icon">
+                        <div>
+                            <p class="humidity">53%</p>
+                            <p>Humidity</p>
+                        </div>
+
+                    </div>
+                    <div class="section">
+                        <img src="imgages/wind.png" alt="wind icon">
+                        <div>
+                            <p class="wind">5.66 km/h</p>
+                            <p>Wind Speed</p>   
+                        </div>
                     </div>
                 </div>
             </div>
@@ -37,5 +49,6 @@
 
     </div>
 </body>
+<script src="script.js"></script>
 
 </html>

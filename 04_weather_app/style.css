@@ -23,20 +23,22 @@ body {
 }
 
 .Weather-container .weather {
-    min-width: 500px;
+    min-width: 320px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin-inline: auto;
+    color: white;
 }
 
-.weather .full-sun{
+.weather .full-sun {
     margin: 20px;
 }
+
 .search-bar input {
-    min-width: 400px;
+    min-width: 300px;
     border-radius: 40px;
-    border: none;
+    outline: none;
 }
 
 .Weather-container .weather .search-bar input,
@@ -50,19 +52,45 @@ button {
     margin-left: 20px;
 }
 
-
-.weather-dets .temp h1 {
-    font-size: 5rem;
-    font-weight: 600;
-    color: white;
+.weather-dets {
+    width: 100%;
     text-align: center;
 }
 
-.weather-dets .temp h2{
-    font-size: 3rem;
+
+.weather-dets .temp {
+    font-size: 5rem;
     font-weight: 500;
-    color: white;
 }
 
+.weather-dets .city {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-top: -10px;
+}
 
+.humidity-windspeed {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 50px;
+}
 
+.section {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.humidity-windspeed .section img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.humidity,
+.wind {
+    font-size: 1.8rem;
+    margin-top: -6px;
+    font-weight: 500;
+}
