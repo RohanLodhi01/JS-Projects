@@ -54,7 +54,7 @@ body {
     font-size: 1.5rem;
 }
 
-.inputBox span {
+.inputBox .copyBtn {
     color: black;
     font-size: 1.5rem;
 }

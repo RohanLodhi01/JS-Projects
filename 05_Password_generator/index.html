@@ -14,13 +14,13 @@
         <h1>Password Generator</h1>
         <div class="inputBox">
             <input type="text" id="password" readonly>
-            <span class="copyBtn"><i class="fa-regular fa-copy"></i></span>
+            <span class="copyBtn" id="copyIcon"><i class="fa-regular fa-copy"></i></span>
         </div>
         <input class="slider" id="lengthSlider" type="range" min="6" max="30" value="6">
         <ul class="password-modify">
             <li>
                 <span>Password Length</span>
-                <span id="lengthValue">6</span>
+                <span id="lengthValue"></span>
             </li>
             <li>
                 <label for="lowercase">Include Lowercase Letters (a-z)</label>
@@ -31,7 +31,7 @@
                 <input type="checkbox" id="uppercase" checked>
             </li>
             <li>
-                <label for="numbers" >Include Numbers (0-9)</label>
+                <label for="numbers">Include Numbers (0-9)</label>
                 <input type="checkbox" id="numbers" checked>
             </li>
             <li>
@@ -43,6 +43,7 @@
         <button class="genBtn" id="generate" type="button">Generate Password</button>
 
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
