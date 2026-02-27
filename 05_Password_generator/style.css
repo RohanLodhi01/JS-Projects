@@ -48,15 +48,16 @@ body {
 
 .inputBox input {
     height: 50px;
-    width: 380px;
     outline: none;
     border: none;
     font-size: 1.5rem;
+    text-overflow: ellipsis;
 }
 
 .inputBox .copyBtn {
     color: black;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .slider {
@@ -98,6 +99,7 @@ body {
     margin-block: 8px;
     padding: 12px 24px;
     font-size: 1.2rem;
+    border-radius: 5px;
 }
 
 .genBtn:hover {

@@ -6,14 +6,14 @@ const numbers = document.getElementById("numbers");
 const symbols = document.getElementById("symbols");
 const genButton = document.getElementById("generate");
 const passwordField = document.getElementById("password");
-const copyIcon = document.getElementById('copyIcon')
+const copyIcon = document.getElementById("copyIcon");
 
 // iniatlize o load
 lengthValue.textContent = slider.value;
 
 // update slider display on input
 slider.addEventListener("input", () => {
-    lengthValue.textContent = slider.value;
+  lengthValue.textContent = slider.value;
 });
 genButton.addEventListener("click", () => {
   passwordField.value = generatePassword();
@@ -48,10 +48,22 @@ function generatePassword() {
   return genPassword;
 }
 
-copyIcon.addEventListener('click',()=>{
-    let copiedPassoword = "";
-    if(passwordField.value !== "" && passwordField.length !== 0){
-        copiedPassoword = passwordField.value;
-        passwordField.textContent = "";
-    }
-})
+copyIcon.addEventListener("click", function () {
+  if (passwordField.value.length > 0) {
+    navigator.clipboard
+      .writeText(passwordField.value)
+      .then(() => {
+        console.log("Copied Successfully");
+        copyIcon.innerText = "check";
+        copyIcon.title = "Password Copied";
+
+        setTimeout(() => {
+          copyIcon.innerText = "content_copy";
+          copyIcon.title = "";
+        }, 3000);
+      })
+      .catch((err) => {
+        console.log("Failed to copy", err);
+      });
+  }
+});
