@@ -57,12 +57,14 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+   
 }
 
 .hand i {
     position: absolute;
     width: 4px;
     height: var(--h);
-    background-color: white;
+    background-color: var(--clr);
     border-radius: 5px;
+
 }
