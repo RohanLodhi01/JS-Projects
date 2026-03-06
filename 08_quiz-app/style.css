@@ -45,9 +45,8 @@ body {
 
 .options .button {
     padding: 10px;
-    background-color: #fff;
     text-align: start;
-    border-radius: 50px;
+    border-radius: 5px;
     border: 1px solid #222;
     color: #222;
     width: 100%;
@@ -57,11 +56,15 @@ body {
     transition: all 0.3s;
 }
 
-.button:hover {
+.button:hover:not([disabled]) {
     background-color: #222;
     color: #fff;
 }
 
+.button:disabled{
+    cursor: not-drop;
+    opacity: 0.8;
+}
 .next-question {
     /* display: none; */
     text-align: center;
@@ -77,4 +80,12 @@ body {
     width: 150px;
     margin: 20px auto;
     display: none;
+}
+
+.correct {
+    background-color: #9aeabc;
+}
+
+.incorrect {
+    background-color: #ff9393;
 }
