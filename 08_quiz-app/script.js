@@ -1,18 +1,18 @@
 const questions = [
   {
-    question: "Which method is used to select an element by ID in JavaScript?",
+    question: "What is the capital of France?",
     options: [
-      "getElementByClass()",
-      "querySelectorAll()",
-      "getElementById()",
-      "selectById()",
+      "Paris",
+      "Rome",
+      "Madrid",
+      "Berlin",
     ],
-    correctAnswer: "getElementById()",
+    correctAnswer: "Paris",
   },
   {
-    question: "Which HTML tag is used to create a hyperlink?",
-    options: ["<link>", "<a>", "<href>", "<url>"],
-    correctAnswer: "<a>",
+    question: "Which planet is known as the Red Planet?",
+    options: ["Venus", "Jupiter", "Mars", "Earth"],
+    correctAnswer: "Mars",
   },
   {
     question: "Which CSS property is used to change text color?",
@@ -48,7 +48,7 @@ function showQuestions() {
 
   currentQuestion.options.forEach((answer) => {
     const button = document.createElement("button");
-    button.innerHTML = answer;
+    button.innerText = answer;
     button.classList.add("button");
     answerButton.appendChild(button);
 
@@ -86,5 +86,28 @@ function selectAnswer(e) {
   });
   nextButton.style.display = "block";
 }
+
+function handleNextButton() {
+  currentQuestionIdx++;
+  if (currentQuestionIdx < questions.length) {
+    showQuestions();
+  } else {
+    showScore();
+  }
+}
+
+function showScore() {
+  resetState();
+  questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+  nextButton.innerHTML = "Play Again";
+  nextButton.style.display = "block";
+}
+nextButton.addEventListener("click", () => {
+  if (currentQuestionIdx < questions.length) {
+    handleNextButton();
+  } else {
+    startQuiz();
+  }
+});
 
 startQuiz();
