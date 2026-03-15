@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Modern password generator | PassForge</title>
+</head>
+
+<body>
+    <div class="card">
+        <!-- Title Bar -->
+        <div class="title-bar">
+            <div class="dots">
+                <div class="dot dot-r"></div>
+                <div class="dot dot-y"></div>
+                <div class="dot dot-g"></div>
+            </div>
+            <span class="titlebar-label">passforge_v2 — secure generator</span>
+        </div>
+
+        <div class="body">
+            <div class="heading">
+                <h1>Pass <span>Forge</span></h1>
+                <p>Cryptographically secure passwords</p>
+            </div>
+        </div>
+
+        <!-- Output -->
+        <div class="output-wrap">
+            <div class="output-box" id="output">Click generate to forge a password</div>
+            <button class="copy-btn" id="copyBtn" title="Copy password">
+                <svg id="copyIcon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" />
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Strength -->
+        <div class="strength-section">
+            <span class="strength-label">Strength</span>
+            <div class="strength-bar">
+                <div class="strength-fill" id="strengthFill"></div>
+            </div>
+            <span class="strength-text" id="strengthText">Fort</span>
+        </div>
+
+    </div>
+</body>
+
+</html>
