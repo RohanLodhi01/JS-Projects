@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(5, 5, 19);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+main {
+    text-align: center;
+    min-width: 300px;
+    background-color: rgb(136, 126, 203);
+    width: 30%;
+    border-radius: 0.5rem;
+}
+
+.container {
+    padding: 2rem;
+
+}
+
+.qr-heading {
+    margin-bottom: 1.2rem;
+    padding: 0.5rem;
+}
+
+.qr-heading .qr-label {
+    font-size: 2.5rem;
+    color: whitesmoke;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.qr-text {
+    border: none;
+    padding: 1rem 0.5rem;
+    width: 100%;
+    outline: none;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+}
+
+.qr-size {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: whitesmoke;
+    margin: 1.2rem 0;
+}
+
+.qr-size .select-size {
+    font-size: 1.5rem;
+    width: fit-content;
+
+}
+
+.size {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    outline: none;
+    border-radius: 0.5rem;
+    color: rgb(93, 78, 78);
+}
+
+.qr-buttons {
+    display: flex;
+    gap: 0.5rem;
+    /* width: 100%; */
+}
+
+.qr-buttons button {
+    /* min-width: 100px; */
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 0.8rem 0;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    color: rgb(86, 79, 125);
+    font-weight: 600;
+}
+
+@media (max-width: 320px ) {
+    .qr-heading .qr-label {
+        font-size: 1.8rem;
+    }
+    .qr-size .select-size {
+        font-size: 1rem;
+    }
+}
