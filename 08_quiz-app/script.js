@@ -1,12 +1,7 @@
 const questions = [
   {
     question: "What is the capital of France?",
-    options: [
-      "Paris",
-      "Rome",
-      "Madrid",
-      "Berlin",
-    ],
+    options: ["Paris", "Rome", "Madrid", "Berlin"],
     correctAnswer: "Paris",
   },
   {
@@ -111,3 +106,4 @@ nextButton.addEventListener("click", () => {
 });
 
 startQuiz();
+
