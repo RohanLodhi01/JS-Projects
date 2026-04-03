@@ -19,7 +19,6 @@ main {
     text-align: center;
     min-width: 300px;
     background-color: rgb(136, 126, 203);
-    width: 30%;
     border-radius: 0.5rem;
 }
 
@@ -71,6 +70,18 @@ main {
     color: rgb(93, 78, 78);
 }
 
+.qr-code {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-code img{
+    border: 1px solid whitesmoke;
+    padding: 1rem;
+    border-radius: 0.5em;
+}
 .qr-buttons {
     display: flex;
     gap: 0.5rem;
@@ -89,10 +100,11 @@ main {
     font-weight: 600;
 }
 
-@media (max-width: 320px ) {
+@media (max-width: 320px) {
     .qr-heading .qr-label {
         font-size: 1.8rem;
     }
+
     .qr-size .select-size {
         font-size: 1rem;
     }

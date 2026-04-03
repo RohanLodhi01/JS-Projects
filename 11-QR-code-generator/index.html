@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <title>QR Code Generator | Website</title>
 </head>
 
@@ -15,7 +16,7 @@
                 <h1 class="qr-label">Generate qr code</h1>
             </div>
 
-            <input class="qr-text" type="text" placeholder="Type your text OR URL">
+            <input class="qr-text" type="text" id="userInput" placeholder="Type your text OR URL">
 
             <div class="qr-size">
                 <span class="select-size">Select Size:</span>
@@ -32,15 +33,16 @@
                 </select>
             </div>
 
-            <div class="qr-body"></div>
+            <div class="qr-code" id="qrContainer"></div>
 
             <div class="qr-buttons">
-                <button type="submit">Generate</button>
-                <button type="button">Download</button>
+                <button type="submit" id="gererateBtn" onclick="generateQR()">Generate</button>
+                <button type="submit" onclick="downloadQR()">Download</button>
             </div>
-
         </div>
     </main>
+
+    <script src="script.js" defer></script>
 </body>
 
 </html>
