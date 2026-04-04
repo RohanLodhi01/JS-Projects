@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: cyan;
+    height: 100vh;
+    width: 100%;
+}
+
+.container {
+    width: 80%;
+    margin: 2em auto 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.header img {
+    width: 80px;
+    height: 80px;
+}
+
+.main-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Lucida Sans', sans-serif;
+    color: white;
+}
+
+.create-note {
+    background: rgb(68, 8, 142);
+    min-width: 200px;
+    color: white;
+    margin-block: 2rem;
+    padding: 1rem 1.2rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+}
+
+.create-note:hover {
+    background-color: rgb(89, 11, 184);
+}
+
+.create-note img {
+    width: 30px;
+    height: 30px;
+}
+
+.notes-content {
+    background-color: white;
+    width: 30rem;
+    border-radius: 0.5em;
+    /* height: 100px; */
+    position: relative;
+}
+
+.input-box {
+    padding: 1.2rem 1.5rem;
+    margin-right: 5px;
+    outline: none;
+    font-family: cursive;
+}
+
+.notes-content img {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
