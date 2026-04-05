@@ -58,24 +58,28 @@ body {
 }
 
 .notes-content {
-    background-color: white;
-    width: 30rem;
-    border-radius: 0.5em;
-    /* height: 100px; */
-    position: relative;
+    max-width: 30rem;
+    display: none;
 }
 
 .input-box {
+    border-radius: 0.5em;
+    background-color: white;
+    position: relative;
     padding: 1.2rem 1.5rem;
     margin-right: 5px;
     outline: none;
     font-family: cursive;
+    margin-bottom: 2rem;
+    text-align: left;
+    width: 100%;
 }
 
-.notes-content img {
+.input-box .delete-icon {
     width: 25px;
     height: 25px;
     position: absolute;
     bottom: 20px;
     right: 20px;
+    cursor: pointer;
 }
