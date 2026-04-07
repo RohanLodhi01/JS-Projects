@@ -43,7 +43,7 @@ function loadNotes() {
 
   savedNotes.forEach((text) => {
     const noteBox = document.createElement("div");
-    noteBox.setAttribute("contenteditabel", true);
+    noteBox.setAttribute("contenteditable", true);
     noteBox.classList.add("input-box");
     noteBox.innerText = text;
 
