@@ -1,37 +1,44 @@
 const createNoteBtn = document.getElementById("createNote");
 const notesBox = document.querySelector(".notes-content");
 
-createNoteBtn.addEventListener("click", () => {
+function createNote(text = "") {
   const noteBox = document.createElement("div");
-  noteBox.setAttribute("contenteditable", true);
   noteBox.classList.add("input-box");
 
-  //   Add delete icon
+  // note text
+  const notetext = document.createElement("div");
+  notetext.setAttribute("contenteditable", true);
+  notetext.classList.add("note-text");
+  notetext.style.placeholder = "Enter you notes here";
+  notetext.innerText = text;
+
+  // note delete icon
   const deleteIcon = document.createElement("img");
-  deleteIcon.src = "/images/delete.png";
+  deleteIcon.src = "images/delete.png";
   deleteIcon.alt = "delete icon";
   deleteIcon.classList.add("delete-icon");
 
-  //   Add delete functionality
+  // delete note
   deleteIcon.addEventListener("click", () => {
     noteBox.remove();
     saveNotes();
   });
 
-  noteBox.addEventListener("input", saveNotes);
-  //   Append delete icon to note
+  // save note on edit
+  notetext.addEventListener("input", saveNotes);
+
+  // insert in notes container
+  noteBox.appendChild(notetext);
   noteBox.appendChild(deleteIcon);
-
-  notesBox.style.display = "block";
   notesBox.appendChild(noteBox);
-
-  saveNotes(); // save when created
-});
+}
 
 function saveNotes() {
   const notes = [];
-  document.querySelectorAll(".input-box").forEach((note) => {
-    notes.push(note.innerText); // store note content
+  document.querySelectorAll(".note-text").forEach((notetext) => {
+    if (notetext.innerText.trim() !== "") {
+      notes.push(notetext.innerText.trim()); // store note content
+    }
   });
 
   localStorage.setItem("notes", JSON.stringify(notes));
@@ -39,32 +46,18 @@ function saveNotes() {
 
 function loadNotes() {
   const savedNotes = JSON.parse(localStorage.getItem("notes")) || [];
-  console.log(savedNotes);
 
-  savedNotes.forEach((text) => {
-    const noteBox = document.createElement("div");
-    noteBox.setAttribute("contenteditable", true);
-    noteBox.classList.add("input-box");
-    noteBox.innerText = text;
-
-    const deleteIcon = document.createElement("img");
-    deleteIcon.src = "/images/delete.png";
-    deleteIcon.alt = "delete icon";
-    deleteIcon.classList.add("delete-icon");
-
-    noteBox.appendChild(deleteIcon);
-    notesBox.appendChild(noteBox);
-
-    deleteIcon.addEventListener("click", () => {
-      noteBox.remove();
-      saveNotes();
-    });
-  });
+  savedNotes.forEach((text) => createNote(text));
 
   if (savedNotes.length > 0) {
     notesBox.style.display = "block";
   }
 }
 
-
 document.addEventListener("DOMContentLoaded", loadNotes);
+
+createNoteBtn.addEventListener("click", () => {
+  createNote();
+  notesBox.style.display = "block";
+  saveNotes();
+});
