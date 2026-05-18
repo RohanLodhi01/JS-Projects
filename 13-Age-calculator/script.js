@@ -5,7 +5,7 @@ const calcAgeBtn = document.getElementById("calculateAge");
 // console.log(dateStr.getMonth())
 
 const currentDate = new Date();
-const date = {
+const today = {
   curryear: currentDate.getFullYear(),
   currmonth: currentDate.getMonth() + 1,
   currday: currentDate.getDate(),
@@ -18,7 +18,7 @@ dateOfBirth.addEventListener("input", (e) => {
   let dateStr = new Date(e.target.value);
   ((dob.year = dateStr.getFullYear()),
     (dob.month = dateStr.getMonth() + 1),
-    (dob.day = dateStr.getDate() + 1));
+    (dob.day = dateStr.getDate()));
 });
 
 function calculateDateOfBirth() {
@@ -27,17 +27,29 @@ function calculateDateOfBirth() {
     return;
   }
 
-  if(dob.year > date.curryear || (dob.year == date.curryear && dob.month)){
-
+  if (
+    dob.year > today.curryear ||
+    (dob.year === today.curryear && dob.month > today.currmonth) ||
+    (dob.year === today.curryear &&
+      dob.month === today.currmonth &&
+      dob.day > today.currday)
+  ) {
+    resultedDob.textContent = "Please select a valid date before today";
+    return;
   }
-  let years = date.curryear - dob.year;
-  let months = date.currmonth - dob.month;
-  let days = date.currday - dob.day;
+  let years = today.curryear - dob.year;
+  let months = today.currmonth - dob.month;
+  let days = today.currday - dob.day;
 
   //   Borrow if days are negative
   if (days < 0) {
     months--;
-    days += 30;
+    const prevMonthsDays = new Date(
+      today.curryear,
+      today.currmonth - 1,
+      0,
+    ).getDate();
+    days += prevMonthsDays;
   }
 
   //   Borrow if months are negative
