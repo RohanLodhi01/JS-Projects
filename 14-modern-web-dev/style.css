@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Google Sans", sans-serif;
+    color: white;
+
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    display: none;
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    color: #fff;
+}
+
+#nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#heading {
+    color: #fff;
+    margin-left: 30px;
+    margin-top: 60px;
+}
+
+#heading h1 {
+    font-size: 10vw;
+    opacity: .6;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 0.9;
+}
+
+#heading #secondh1 {
+    margin-left: 150px;
+}
+
+.blocktext {
+    width: fit-content;
+}
+
+#heading h5 {
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 18px;
+}
+
+#main {
+    width: 100%;
+    background-color: black;
+}
+
+#chhotiheadings {
+    margin-top: 150px;
+    padding-right: 40px;
+}
+
+#chhotiheadings h5 {
+    text-transform: uppercase;
+    margin-top: 0.5vw;
+    font-size: 1vw;
+    text-align: right;
+}
+
+
+#herofooter {
+    padding: 0px 2vw;
+    /* background-color: red; */
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    bottom: 3%;
+}
+
+#herofooter a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#iconset {
+    display: flex;
+    gap: 5px;
+}
+
+#iconset #circle {
+    background-color: #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-weight: 600;
+}
+
+#circle i {
+    color: black;
+}
+
+#second {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    padding-top: 200px;
+    padding-right: 10vw;
+    padding-left: 4vw;
+}
+
+#second .elem {
+    width: 100%;
+    border-top: 1px solid rgba(136, 136, 136, 0.6);
+    padding: 3vw 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.elem h1 {
+    font-size: 7vw;
+    text-transform: uppercase;
+    font-weight: 500;
+    opacity: .6;
+}
